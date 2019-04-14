@@ -6,45 +6,44 @@ body {
     margin: 0;
     padding: 0;
 }
-picture, img {
+
+picture,
+img {
     max-width: 90%;
 }
+
 .container ul {
     margin: 0;
     padding: 0;
     list-style: none;
 }
+
+
 /* -- FIRST BREAK POINT -- */
+
 @media screen and (max-width: 600px) {
     .container {
-    margin: 1rem 1rem;
-   
+        margin: 1rem 1rem;
+    }
+    .container ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    .container ul li {
+        margin: 0 0 1rem 0;
+    }
+    .container ul img {
+        max-width: 90%;
+        height: auto;
+        display: block;
+    }
 }
 
-.container ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-   
-}
 
-.container ul li {
-    margin: 0 0 1rem 0;
-}
+/* -- SECOND BREAK POINT -- */
 
-.container ul img {
-    max-width: 90%;
-    height: auto;
-    display: block;
-}
-
-    
-}
-
- /* -- SECOND BREAK POINT -- */
-                    
-@media screen and (min-width: 600px) and (max-width: 1200px){
-    
+@media screen and (min-width: 600px) and (max-width: 1200px) {
     .container ul::after {
         content: "";
         display: block;
@@ -54,37 +53,33 @@ picture, img {
         max-width: 90%;
         width: calc(50% - 0.5rem);
         float: left;
-        margin: 0 1rem 1rem 0;
+        margin: 1rem 1rem 1rem 0;
     }
     .container ul li:nth-child(2n) {
-        margin: 0 0 1rem 0;
+        margin: 1rem 0 1rem 0;
     }
 }
 
- /* -- THIRD BREAK POINT -- */
-                    
+
+/* -- THIRD BREAK POINT -- */
+
 @media screen and (min-width: 1200px) {
-    
-   .container {
-       max-width: 90%;
-       /* width: 75%;*/
+    .container {
+        max-width: 90%;
+        /* width: 75%;*/
         margin: 0 auto
     }
-    
     .container ul:after {
         content: "";
         display: block;
         clear: left;
     }
-    
     .container ul li {
         width: calc(25% - 0.75rem);
         float: left;
-        margin: 0 1rem 1rem 0;
+        margin: 1rem 1rem 1rem 0;
     }
-    
     .container ul li:nth-child(4n) {
-        margin: 0 0 1rem 0;
+        margin: 1rem 0 1rem 0;
     }
 }
-                        
